@@ -1,8 +1,11 @@
 const express = require('express')
 const app = express()
 const {MongoClient} = require('mongodb');
+require('dotenv').config()
 
-const client = new MongoClient('mongodb://127.0.0.1:27017');
+const password = process.env.DB_PASSWORD
+const client = new MongoClient(`mongodb+srv://dbuser:${password}@url-shortener-db.tsco0sk.mongodb.net/`);
+
 let db,userCol;
 (async () => {
     await client.connect();
