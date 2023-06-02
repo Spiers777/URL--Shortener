@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const {MongoClient} = require('mongodb');
-const {cors} = require('cors')
+const cors = require('cors')
 require('dotenv').config()
 
 const password = process.env.DB_PASSWORD
