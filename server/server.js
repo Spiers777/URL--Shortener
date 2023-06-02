@@ -11,6 +11,7 @@ let db,userCol;
     await client.connect();
     db = client.db('mydatabase');
     userCol = db.collection('users');
+    console.log("Connected to database")
 })()
 
 const randomString = () => {
