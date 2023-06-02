@@ -51,6 +51,7 @@ body {
         cursor: pointer;
         transition: 100ms ease;
         height: 30px;
+        font-size: calc(0.3vw + 0.3vh + 12px);
     }
     .outputLink:active {
         transform: scale(0.9);
