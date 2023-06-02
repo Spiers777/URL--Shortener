@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const {MongoClient} = require('mongodb');
+const {cors} = require('cors')
 require('dotenv').config()
 
 const password = process.env.DB_PASSWORD
@@ -45,7 +46,7 @@ const fetchURL = async (extension) => {
     return {"redirect": url?.redirect}
 }
 
-app.get("/api/create/", (req, res) => {
+app.get("/api/create/", cors(), (req, res) => {
     (async () => {
         let url = req.query.url
         url = "https://" + url.replace("https://", "", "http://", "")
