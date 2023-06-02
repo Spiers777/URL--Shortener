@@ -6,7 +6,7 @@ function App() {
   const [URL, setURL] = useState("")
 
   const handleURLcreation = async () => {
-    fetch(`/api/create?url=${URL}`).then(res => res.json()).then(data => {
+    fetch(`https://url-shortener-backend-1k9t.onrender.com/api/create?url=${URL}`).then(res => res.json()).then(data => {
       setBackendData(data)
     })
   }
